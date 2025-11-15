@@ -10,7 +10,8 @@ def main():
         print("포트 번호는 정수여야 합니다.")
         return
 
-    address = ("localhost", port)  # 서버 주소와 포트 번호
+    address = ('127.0.0.1', 2500)  # 서버 주소와 포트 번호
+    # address = ('localhost', 5000)
 
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         try:

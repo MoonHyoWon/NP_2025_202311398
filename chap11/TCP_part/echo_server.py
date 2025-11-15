@@ -5,7 +5,8 @@ BUFSIZE = 1024
 
 with socket(AF_INET, SOCK_STREAM) as sock:
     sock.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)  # 포트 재사용
-    sock.bind(('localhost', PORT))                # 종단점 주소 바인딩
+    # sock.bind(('localhost', PORT))                # 종단점 주소 바인딩
+    sock.bind(('127.0.0.1', PORT))    
     sock.listen(1)                                # 대기열 크기 1
     print(f"Listening on localhost:{PORT}")
 
